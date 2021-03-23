@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#logo {
+  color: gainsboro;
+  font-family: 'Abril Fatface';
+  font-size: 3rem;
+}
+
+.nav-header {
+  min-height: 10vh;
+  font-sze: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gainsboro;
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0rem;
+}
+
+.line1, .line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background-color: gainsboro;
+  pointer-events: none;
+}
+
+.slide {
+  min-height: 100vh;
+  margin: 0 auto 0 auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gainsboro;
+}
+
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-basis: 25rem;
+  padding-left: 5rem;
+  position: relative;
+}
+
+.hero-desc h2 {
+  font-family: 'Abril Fatface';
+  font-size: 5rem;
+  width: 100%;
+}
+
+.hero-desc p {
+  font-size: 1.6rem;
+  padding: 3rem 0;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-img {
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
+}
+
+span {
+  color: mediumorchid;
+}

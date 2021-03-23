@@ -99,6 +99,15 @@ span {
   cursor: pointer;
 }
 
+.reveal-img, .reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+}
+
 /*Navigation Hamburger Menu */
 
 .nav-bar {
@@ -113,8 +122,8 @@ span {
   align-items: center;
   z-index: 1;
   opacity: 1;
-  /* clip-path: circle(5rem at 100% -10%);
-  -webkit-clip-path: circle(5rem at 100% -10%); */
+  clip-path: circle(5rem at 100% -10%);
+  -webkit-clip-path: circle(5rem at 100% -10%);
 }
 
 .menu {

@@ -64,6 +64,7 @@ body {
   font-family: 'Abril Fatface';
   font-size: 5rem;
   width: 100%;
+  align-self: flex-start;
 }
 
 .hero-desc p {
@@ -85,4 +86,15 @@ body {
 
 span {
   color: mediumorchid;
+}
+
+.explore {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: gainsboro;
+  border: 1px solid gainsboro;
+  font-size: 1.6rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
 }

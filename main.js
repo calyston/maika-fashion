@@ -20,7 +20,7 @@ function animateSlides() {
 
     slideTimeline.fromTo(revealImg, { x: '0%' }, { x: '100%' });
     slideTimeline.fromTo(img, { opacity: '0' }, { opacity: '1' }, '-=2');
-    slideTimeline.fromTo(revealText, { opacity: '1' }, { opacity: '0' }, '-=1');
+    slideTimeline.fromTo(revealText, { y: '0%' }, { y: '100%' }, '-=1');
     slideTimeline.fromTo(nav, { y: '-100%' }, { y: '0%' }, '-=3');
 
     //Create Scene
@@ -48,7 +48,7 @@ function cursor(e) {
 
 function activeCursor(e) {
   const item = e.target;
-  if (item.id === 'logo' || item.classList.contains('burger')) {
+  if (item.id === 'logo' || item.classList.contains('burger', 'explore')) {
     mouse.classList.add('nav-active');
   } else {
     mouse.classList.remove('nav-active');

@@ -1,5 +1,6 @@
 let controller;
 let slideScene;
+let pageScene;
 
 function animateSlides() {
   //Initiate Controller
@@ -25,11 +26,10 @@ function animateSlides() {
     //Create Scene
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
-      triggerHook: 0.25,
+      triggerHook: 1.25,
       reverse: false
     })
       .setTween(slideTimeline)
-      // .addTo(controller)
       .addIndicators({
         colorStart: 'white',
         colorTrigger: 'white',
@@ -38,5 +38,13 @@ function animateSlides() {
       .addTo(controller)
   });
 }
+
+//Styled Cursor
+function cursor(e) {
+  let mouse = document.querySelector('.cursor');
+  mouse.style.top = e.pageY + 'px';
+  mouse.style.left = e.pageX + 'px';
+}
+window.addEventListener('mousemove', cursor);
 
 animateSlides();

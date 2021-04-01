@@ -125,6 +125,7 @@ span {
   border: 2px solid gainsboro;
   border-radius: 50%;
   position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 /*Navigation Hamburger Menu */

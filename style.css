@@ -50,6 +50,15 @@ body {
   color: gainsboro;
 }
 
+.blog {
+  flex-direction: row-reverse;
+}
+
+.blog .hero-desc {
+  padding-left: 0;
+  padding-right: 5rem;
+}
+
 .hero-desc {
   display: flex;
   flex-direction: column;

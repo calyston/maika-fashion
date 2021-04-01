@@ -132,7 +132,7 @@ span {
   transform-origin: 75% 75%;
 }
 
-.cursor.nav-active {
+.cursor.nav-active, .cursor.explore-active {
   background-color: mediumorchid;
   transform: scale(3);
 }

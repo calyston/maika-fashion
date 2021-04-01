@@ -48,10 +48,12 @@ function cursor(e) {
 
 function activeCursor(e) {
   const item = e.target;
-  if (item.id === 'logo' || item.classList.contains('burger', 'explore')) {
+  if (item.id === 'logo' || item.classList.contains('menu') || item.classList.contains('explore')) {
     mouse.classList.add('nav-active');
+    mouse.classList.add('explore-active');
   } else {
     mouse.classList.remove('nav-active');
+    mouse.classList.remove('explore-active');
   }
 }
 window.addEventListener('mousemove', cursor);

@@ -48,13 +48,20 @@ function cursor(e) {
 
 function activeCursor(e) {
   const item = e.target;
-  if (item.id === 'logo' || item.classList.contains('menu') || item.classList.contains('explore')) {
+  if (item.id === 'logo' || item.classList.contains('menu')) {
     mouse.classList.add('nav-active');
-    mouse.classList.add('explore-active');
   } else {
     mouse.classList.remove('nav-active');
-    mouse.classList.remove('explore-active');
   }
+  if (item.classList.contains('explore')) {
+    mouse.classList.add('explore-active');
+    gsap.to('.title-swipe', 1, { y: '0%' });
+
+  } else {
+    mouse.classList.remove('explore-active');
+    gsap.to('.title-swipe', 1, { y: '-100%' });
+  }
+
 }
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mouseover', activeCursor);

@@ -204,3 +204,7 @@ span {
   background-color: mediumorchid;
   z-index: 1;
 }
+
+body.hide {
+  overflow: hidden;
+}

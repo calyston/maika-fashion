@@ -87,12 +87,14 @@ function navToggle(e) {
     gsap.to('.line2', 1, { rotate: '-45', y: -3.5, background: 'black' });
     gsap.to('#logo', 1, { color: 'black' });
     gsap.to('.nav-bar', 2, { clipPath: 'circle(2500px at 100% -10%)' });
+    document.body.classList.add('hide');
   } else {
     e.target.classList.remove('active');
     gsap.to('.line1', 1, { rotate: '0', y: 0, background: 'white' });
     gsap.to('.line2', 1, { rotate: '0', y: 0, background: 'white' });
     gsap.to('#logo', 1, { color: 'white' });
     gsap.to('.nav-bar', 2, { clipPath: 'circle(50px at 100% -10%)' }, '-=3');
+    document.body.classList.remove('hide');
   }
 
 }

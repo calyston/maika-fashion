@@ -99,6 +99,26 @@ function navToggle(e) {
 
 }
 
+//Barba Page Transitions
+barba.init({
+  views: [
+    {
+      namespace: 'home'
+      beforeEnter() {
+        animateSlides();
+      },
+      beforeLeave() {
+        slideScene.destroy();
+        pageScene.destroy();
+        controller.destroy();
+      }
+    },
+    {
+      namespace: 'fashion'
+    }
+  ]
+})
+
 //Event Listeners
 hamburgerMenu.addEventListener('click', navToggle);
 window.addEventListener('mousemove', cursor);

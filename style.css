@@ -21,6 +21,7 @@ body {
 }
 
 .nav-header {
+  position: relative;
   min-height: 10vh;
   font-size: 3rem;
   display: flex;
@@ -30,7 +31,7 @@ body {
   width: 90%;
   margin: auto;
   padding: 2rem 0rem;
-  z-index: 2;
+  z-index: 3;
 }
 
 .line1, .line2 {

@@ -40,7 +40,8 @@ function animateSlides() {
 }
 
 //Styled Cursor
-let mouse = document.querySelector('.cursor');
+const mouse = document.querySelector('.cursor');
+const hamburgerMenu = document.querySelector('.menu');
 function cursor(e) {
   mouse.style.top = e.pageY + 'px';
   mouse.style.left = e.pageX + 'px';
@@ -53,16 +54,51 @@ function activeCursor(e) {
   } else {
     mouse.classList.remove('nav-active');
   }
-  if (item.classList.contains('explore')) {
+  if (item.classList.contains('exp-about')) {
     mouse.classList.add('explore-active');
-    gsap.to('.title-swipe', 1, { y: '0%' });
+    gsap.to('.t-swipe1', 1, { y: '0%' });
 
   } else {
     mouse.classList.remove('explore-active');
-    gsap.to('.title-swipe', 1, { y: '-100%' });
+    gsap.to('.t-swipe1', 1, { y: '-100%' });
+  }
+  if (item.classList.contains('exp-blog')) {
+    mouse.classList.add('explore-active');
+    gsap.to('.t-swipe2', 1, { y: '0%' });
+
+  } else {
+    mouse.classList.remove('explore-active');
+    gsap.to('.t-swipe2', 1, { y: '-100%' });
+  }
+  if (item.classList.contains('exp-browse')) {
+    mouse.classList.add('explore-active');
+    gsap.to('.t-swipe3', 1, { y: '0%' });
+
+  } else {
+    mouse.classList.remove('explore-active');
+    gsap.to('.t-swipe3', 1, { y: '-100%' });
   }
 
 }
+function navToggle(e) {
+  if (!e.target.classList.contains('active')) {
+    e.target.classList.add('active');
+    gsap.to('.line1', 1, { rotate: '45', y: 5, background: 'black' });
+    gsap.to('.line2', 1, { rotate: '-45', y: -5, background: 'black' });
+    gsap.to('#logo', 1, { color: 'black' });
+    gsap.to('.nav-bar', 2, { clipPath: 'circle(2500px at 100% -10%)' });
+  } else {
+    e.target.classList.remove('active');
+    gsap.to('.line1', 1, { rotate: '0', y: 0, background: 'white' });
+    gsap.to('.line2', 1, { rotate: '0', y: 0, background: 'white' });
+    gsap.to('#logo', 1, { color: 'white' });
+    gsap.to('.nav-bar', 2, { clipPath: 'circle(50px at 100% -10%)' });
+  }
+
+}
+
+//Event Listeners
+hamburgerMenu.addEventListener('click', navToggle);
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mouseover', activeCursor);
 

@@ -4,6 +4,11 @@
 ### Live Preview: 
 
 ## Key Features
+- GSAP
+- Animated slides
+- Scroll effects
+- Styled cursor
+- Hamburger Menu
 
 
 ## Technologies Used

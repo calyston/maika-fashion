@@ -30,6 +30,7 @@ body {
   width: 90%;
   margin: auto;
   padding: 2rem 0rem;
+  z-index: 2;
 }
 
 .line1, .line2 {
@@ -133,7 +134,7 @@ span {
 }
 
 .cursor.nav-active, .cursor.explore-active {
-  background-color: mediumorchid;
+  background-color: rgba(186, 85, 211, 0.5);
   transform: scale(3);
 }
 
@@ -149,7 +150,7 @@ span {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   opacity: 1;
   clip-path: circle(5rem at 100% -10%);
   -webkit-clip-path: circle(5rem at 100% -10%);
@@ -198,7 +199,7 @@ span {
   transform: translateY(100%);
 }
 
-.t-swipe {
+.t-swipe1, .t-swipe2, .t-swipe3 {
   background-color: mediumorchid;
   z-index: 1;
 }

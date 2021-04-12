@@ -218,7 +218,7 @@ body.hide {
   align-items: center;
   width: 70%;
   margin: auto;
-  color: white;
+  color: gainsboro;
   margin-top: 5rem;
   flex-wrap: wrap;
   position: relative;
@@ -239,4 +239,34 @@ body.hide {
   flex: 1;
   position: relative;
   flex-basis: 25rem;
+}
+
+.fashion-text h1 {
+  font-size: 6rem;
+  padding: 5rem 0;
+  color: mediumorchid;
+  font-family: 'Abril Fatface';
+}
+
+.clothing-description {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.clothing-prices {
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+
+.fashion-text span {
+  font-size: 2rem;
+  padding: 2rem 2rem 0 0;
+}
+
+.fashion-number {
+  position: absolute;
+  font-size: 10rem;
+  left: 50%;
+  bottom: 10%;
+  opacity: 0.5;
 }

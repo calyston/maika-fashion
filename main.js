@@ -103,7 +103,7 @@ function navToggle(e) {
 barba.init({
   views: [
     {
-      namespace: 'home'
+      namespace: 'home',
       beforeEnter() {
         animateSlides();
       },
@@ -114,7 +114,23 @@ barba.init({
       }
     },
     {
-      namespace: 'fashion'
+      namespace: 'fashion',
+    }
+  ],
+  transitions: [
+    {
+      leave({ current, next }) {
+        let done = this.async();
+        //Fade out animation
+        const timeline = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        timeline.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0, onComplete: done });
+      },
+      enter({ current, next }) {
+        let done = this.async();
+        //Fade in animation
+        const timeline = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        timeline.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1, onComplete: done });
+      }
     }
   ]
 })

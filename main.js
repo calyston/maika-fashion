@@ -56,27 +56,27 @@ function activeCursor(e) {
   }
   if (item.classList.contains('exp-about')) {
     mouse.classList.add('explore-active');
-    gsap.to('.t-swipe1', 1, { y: '0%' });
+    gsap.to('.t-swipe1', 1, { backgroundColor: 'mediumorchid', opacity: 1, y: '0%' });
 
   } else {
     mouse.classList.remove('explore-active');
-    gsap.to('.t-swipe1', 1, { y: '-100%' });
+    gsap.to('.t-swipe1', 1, { backgroundColor: 'black', opacity: 0, y: '-100%' });
   }
   if (item.classList.contains('exp-blog')) {
     mouse.classList.add('explore-active');
-    gsap.to('.t-swipe2', 1, { y: '0%' });
+    gsap.to('.t-swipe2', 1, { backgroundColor: 'mediumorchid', opacity: 1, y: '0%' });
 
   } else {
     mouse.classList.remove('explore-active');
-    gsap.to('.t-swipe2', 1, { y: '-100%' });
+    gsap.to('.t-swipe2', 1, { backgroundColor: 'black', opacity: 0, y: '-100%' });
   }
   if (item.classList.contains('exp-browse')) {
     mouse.classList.add('explore-active');
-    gsap.to('.t-swipe3', 1, { y: '0%' });
+    gsap.to('.t-swipe3', 1, { backgroundColor: 'mediumorchid', opacity: 1, y: '0%' });
 
   } else {
     mouse.classList.remove('explore-active');
-    gsap.to('.t-swipe3', 1, { y: '-100%' });
+    gsap.to('.t-swipe3', 1, { backgroundColor: 'black', opacity: 0, y: '-100%' });
   }
 
 }
@@ -100,12 +100,14 @@ function navToggle(e) {
 }
 
 //Barba Page Transitions
+const logo = document.querySelector('#logo');
 barba.init({
   views: [
     {
       namespace: 'home',
       beforeEnter() {
         animateSlides();
+        logo.href = './index.html';
       },
       beforeLeave() {
         slideScene.destroy();
@@ -115,6 +117,9 @@ barba.init({
     },
     {
       namespace: 'fashion',
+      beforeEnter() {
+        logo.href = '../index.html';
+      }
     }
   ],
   transitions: [
@@ -122,13 +127,15 @@ barba.init({
       leave({ current, next }) {
         let done = this.async();
         //Fade out animation
-        const timeline = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        const timeline = gsap.timeline({ defaults: { duration: 2, ease: "power2.inOut" } });
         timeline.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0, onComplete: done });
       },
       enter({ current, next }) {
         let done = this.async();
+        //Scroll to top of page
+        window.scrollTo(0, 0);
         //Fade in animation
-        const timeline = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        const timeline = gsap.timeline({ defaults: { duration: 2, ease: "power2.inOut" } });
         timeline.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1, onComplete: done });
       }
     }

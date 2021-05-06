@@ -173,6 +173,11 @@ span {
 
 .nav-links h3 {
   padding: 3rem 0;
+  cursor: pointer;
+}
+
+.nav-bar h2, p {
+  cursor: default;
 }
 
 .contact {

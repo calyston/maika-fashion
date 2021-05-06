@@ -4,16 +4,19 @@ Maika is a mock fashion magazine website. This project was practice for animatio
 
 ### Live Preview: 
 
+https://calyston-maika.netlify.app/
+
 ## Key Features
 - GSAP
 - Animated slides
 - Scroll effects
 - Styled cursor
 - Hamburger Menu
+- Barba Page Transitions
 
 
 ## Technologies Used
-JavaScript, CSS, HTML.
+JavaScript, CSS, HTML, GSAP, Barba.
 
 #### Written by Christine Lyston
 #### Date: March 2021

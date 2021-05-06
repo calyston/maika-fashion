@@ -207,7 +207,7 @@ span {
 
 .t-swipe1, .t-swipe2, .t-swipe3 {
   background-color: mediumorchid;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 body.hide {

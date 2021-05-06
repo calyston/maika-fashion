@@ -30,11 +30,6 @@ function animateSlides() {
       reverse: false
     })
       .setTween(slideTimeline)
-      .addIndicators({
-        colorStart: 'white',
-        colorTrigger: 'white',
-        name: 'slide'
-      })
       .addTo(controller)
   });
 }
@@ -56,27 +51,27 @@ function activeCursor(e) {
   }
   if (item.classList.contains('exp-about')) {
     mouse.classList.add('explore-active');
-    gsap.to('.t-swipe1', 1, { backgroundColor: 'mediumorchid', opacity: 1, y: '0%' });
+    gsap.to('.t-swipe1', 1, { y: '0%', opacity: 1 });
 
   } else {
     mouse.classList.remove('explore-active');
-    gsap.to('.t-swipe1', 1, { backgroundColor: 'black', opacity: 0, y: '-100%' });
+    gsap.to('.t-swipe1', 1, { y: '-100%', opacity: 0 });
   }
   if (item.classList.contains('exp-blog')) {
     mouse.classList.add('explore-active');
-    gsap.to('.t-swipe2', 1, { backgroundColor: 'mediumorchid', opacity: 1, y: '0%' });
+    gsap.to('.t-swipe2', 1, { y: '0%', opacity: 1 });
 
   } else {
     mouse.classList.remove('explore-active');
-    gsap.to('.t-swipe2', 1, { backgroundColor: 'black', opacity: 0, y: '-100%' });
+    gsap.to('.t-swipe2', 1, { y: '-100%', opacity: 0 });
   }
   if (item.classList.contains('exp-browse')) {
     mouse.classList.add('explore-active');
-    gsap.to('.t-swipe3', 1, { backgroundColor: 'mediumorchid', opacity: 1, y: '0%' });
+    gsap.to('.t-swipe3', 1, { y: '0%', opacity: 1 });
 
   } else {
     mouse.classList.remove('explore-active');
-    gsap.to('.t-swipe3', 1, { backgroundColor: 'black', opacity: 0, y: '-100%' });
+    gsap.to('.t-swipe3', 1, { y: '-100%', opacity: 0 });
   }
 
 }
@@ -128,7 +123,9 @@ barba.init({
         let done = this.async();
         //Fade out animation
         const timeline = gsap.timeline({ defaults: { duration: 2, ease: "power2.inOut" } });
-        timeline.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0, onComplete: done });
+        timeline.to('.title-swipe', 1, { y: '-100%', opacity: 0 });
+        timeline.fromTo('.nav-header', { y: '0%' }, { y: '-100%' });
+        timeline.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0, onComplete: done }, '-=1.5');
       },
       enter({ current, next }) {
         let done = this.async();
@@ -136,7 +133,8 @@ barba.init({
         window.scrollTo(0, 0);
         //Fade in animation
         const timeline = gsap.timeline({ defaults: { duration: 2, ease: "power2.inOut" } });
-        timeline.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1, onComplete: done });
+        timeline.fromTo('.nav-header', { y: '-100%' }, { y: '0%' });
+        timeline.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1, onComplete: done }, '-=1.5');
       }
     }
   ]

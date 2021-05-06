@@ -1,5 +1,6 @@
 # Maika
 
+Maika is a mock fashion magazine website. This project was practice for animations and was my first experience using GSAP.
 
 ### Live Preview: 
 

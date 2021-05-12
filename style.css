@@ -280,3 +280,80 @@ body.hide {
   bottom: 10%;
   opacity: 0.5;
 }
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0
+  }
+
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-desc {
+    padding: 0!important;
+  }
+
+  .hero-desc h2 {
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero-desc p {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .explore {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+
+  /* Fashion Page */
+
+  .fashion-text {
+    text-align: center;
+  }
+
+  .fashion-text h1 {
+    font-size: 5rem;
+    padding: 2rem;
+  }
+
+  .clothing-description {
+    font-size: 1.6rem;
+  }
+
+  .clothing-prices {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  /* Hamburger Menu */
+  .nav-bar {
+    display: block;
+  }
+
+  .nav-links {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  .contact h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .contact p {
+    padding: 2rem;
+    text-align: center;
+  }
+
+}
